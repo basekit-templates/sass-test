@@ -1,0 +1,61 @@
+{
+    "name":"sass-test",
+    "preprocessor": "sass",
+    "widgetVersion": 2,
+    "thumbnail":"bergen.png",
+    "templateType":"standard",
+    "pageTypes":["home"],
+    "screenshot":"atelier-screenshot.jpg",
+    "images":[
+        "images/slideshow-1.jpg",
+        "images/slideshow-2.jpg"
+    ],
+    "styles": {
+        "site": {
+            "color__body--background": "#f5f5f5",
+            "color__container--background": "#ffffff",
+            "color__link--text": "#e7a022",
+            "font__companyname--font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
+            "font__companyname--font-size": "18px",
+            "font__companyname--line-height": "26px",
+            "font__companyname--font-weight": "400",
+            "font__companyname--letter-spacing": "2px",
+            "color__companyname--text": "#000000"
+        },
+        "typography": {
+            "font__h1--font-family": "\"Playfair Display\", Times New Roman, serif",
+            "font__h1--font-size": "36px",
+            "font__h1--line-height": "48px",
+            "font__h1--font-weight": "400",
+            "font__h1--letter-spacing": "0px",
+            "color__h1--text": "#1e1e1e",
+            "font__h2--font-family": "\"Playfair Display\", Times New Roman, serif",
+            "font__h2--font-size": "30px",
+            "font__h2--line-height": "40px",
+            "font__h2--font-weight": "400",
+            "font__h2--letter-spacing": "0px",
+            "color__h2--text": "#1e1e1e",
+            "font__h3--font-family": "\"Playfair Display\", Times New Roman, serif",
+            "font__h3--font-size": "22px",
+            "font__h3--font-weight": "400",
+            "font__h3--line-height": "34px",
+            "font__h3--letter-spacing": "0px",
+            "color__h3--text": "#1e1e1e",
+            "font__h4--font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
+            "font__h4--font-size": "20px",
+            "font__h4--font-weight": "400",
+            "font__h4--line-height": "38px",
+            "font__h4--letter-spacing": "0px",
+            "color__h4--text": "#1e1e1e",
+            "font__p--font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
+            "font__p--font-size": "17px",
+            "font__p--font-weight": "400",
+            "font__p--line-height": "36px",
+            "font__p--letter-spacing": "0px",
+            "color__p--text": "#808080"
+        },
+        "header": {
+            "color__footer--background": "rgb(45,45,45)"
+        }
+    }
+}

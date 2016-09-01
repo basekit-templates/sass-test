@@ -1,0 +1,127 @@
+
+// ------------------------------------
+//  Contact Form
+// ------------------------------------
+
+
+
+// Contact / signup form styling
+.contactform,
+.advancedcontactform,
+.signupform,
+.blogsearch {
+
+
+    &__form {
+        margin: 0 auto 70px;
+        max-width: 960px;
+        padding: 0;
+
+        @media @tablet-860px {
+            padding: 50px 35px;
+        }
+
+        @media @mobile-650px {
+            padding: 35px 25px;
+        }
+    }
+
+
+    &_form-group {
+        margin-bottom: 20px;
+    }
+
+
+    &__legend {
+        font-size: @font__h1--font-size;
+        line-height: @font__h1--line-height;
+        margin-bottom: 25px;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    &__input,
+    &__textarea {
+        background-color: white!important;
+    }
+
+
+    &__button {
+        margin-top: 5px;
+        height: 55px;
+        width: 100%;
+    }
+}
+
+
+.advancedcontactform {
+
+
+    &__option-list {
+        margin: 0;
+
+        .label {
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    &__form-group > .label {
+        display: block;
+        line-height: 2;
+        vertical-align: initial;
+    }
+
+    .option-item--radio,
+    .option-item--checkbox {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .input--checkbox,
+    .input--radio {
+        margin-right: 4px;
+    }
+
+    &__select {
+        background-color: white;
+        border: 1px solid #ddd;
+    }
+
+}
+
+
+.signupform,
+.blogsearch {
+
+
+    &__form-body {
+        .flex-display;
+        .flex-wrap(nowrap);
+        .align-items(flex-end);
+
+        @media @mobile-650px {
+            display: block;
+        }
+
+        .signupform__form-group:first-child {
+            .flex(1 1 auto);
+        }
+    }
+
+
+    &__button {
+        margin-top: 0;
+        min-width: 100px;
+        height: 54px;
+    }
+}
+
+
+.blogsearch,
+.signupform {
+    .form-group:first-child {
+        .flex-grow(1);
+    }
+}

@@ -1,0 +1,134 @@
+// -----------------------------
+//  2. Twitter Widget
+// -----------------------------
+
+
+// Twitter widget container
+ul.tweet-list {
+    .flex-display;
+    .flex-wrap(wrap);
+    .align-content(stretch);
+    .align-items(stretch);
+    padding-left: 0;
+    margin-top: 65px;
+}
+
+
+// Single tweet
+.tweet-list li {
+    background-color: darken(@color__twitter-item--background, 2%);
+    border: 1px solid darken(@color__twitter-item--background, 10%);
+    .border-radius(6px);
+    .flex(1 0 auto);
+    margin-bottom: 25px;
+    margin-right: 3.33%;
+    padding: 28px 25px 25px;
+    width: 30%;
+
+    @media @tablet-860px {
+        margin-right: 2%;
+        width: 48%;
+    }
+
+    @media @mobile-650px {
+        margin-right: 0;
+        width: 100%;
+    }
+
+
+    // Remove margin from last child
+    &:last-child {
+        margin-bottom: 25px!important;
+        margin-right: 0;
+    }
+
+
+    // Adds twitter icon above widget
+    &:first-child .tweet-content:after {
+        color: darken(@color__button--background, 20%);
+        content: "\f099";
+        font-family: 'FontAwesome', sans-serif;
+        position: absolute;
+        left: 0;
+        top: -42px;
+        font-size: 28px;
+    }
+
+
+    // Hides account name from each tweet
+    .account-link {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+// If twitter widget is in two columns
+.columns-two-left .tweet-list li ,
+.columns-two-right .tweet-list li  {
+    margin-right: 2%;
+    width: 48%;
+
+    @media @mobile-650px {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+// If twitter widget is in three or four columns
+.columns-three-left,
+.columns-three-right,
+.columns-four-left,
+.columns-four-right,
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .tweet-list li {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+// Twitter account name styling
+.account-name {
+    font-family: @font__h2--font-family;
+    font-size: bkscale(@font__h2--font-size, 0.85);
+
+    @media @tablet-860px {
+        font-size: bkscale(@font__h2--font-size, 0.75);
+        line-height: bkscale(@font__h2--font-size, 0.75);
+    }
+
+    // Adds twitter icon to the right of the account name
+    &:after {
+        content: "\f099";
+        font-family: 'FontAwesome', sans-serif;
+        position: absolute;
+        right: 0;
+    }
+}
+
+// Hide Twitter avatar
+.twitter__avatar {
+    display: none;
+    visibility: hidden;
+}
+
+// Tweet content
+.tweet-content {
+    color: darken(@color__p--text, 15%);
+    line-height: bkscale(@font__p--line-height, 0.8);
+    padding-bottom: 5px;
+    word-break: break-word;
+}
+
+// Tweet metadata (Date and platform)
+.tweet-metadata {
+    font-size: bkscale(@font__p--font-size, 0.85);
+    time, span {
+        color: @font-swatch5-color;
+    }
+    .timestamp {
+        margin-right: 0;
+    }
+}

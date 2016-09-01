@@ -1,0 +1,49 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+
+<!-- Navigation Container -->
+<div class="blog-page">
+
+
+    <!-- Header -->
+    {% include "includes/header.twig" %}
+
+
+    <!-- Main Zone -->
+    {{widget('blogpost', 'singleblogpost', {})|raw}}
+
+
+    <!-- Smooth Scroll Arrow -->
+    <a href="#main"  class="feature-scroll"></a>
+
+
+    <!-- Footer -->
+    {% include "includes/footer.twig" %}
+
+
+</div>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+
+    <script>
+    $(".feature-scroll").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".blogpost__post-content").offset().top
+        }, 2000);
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+        if ( $("article").hasClass("post-article--has-image") ) {
+            $(".blog-page").addClass("has-image");
+        }
+    });
+    </script>
+
+{% endblock %}

@@ -1,0 +1,152 @@
+
+// -----------------------------
+// Table of Contents
+// -----------------------------
+
+//  LESS Includes
+//    - BK LESS Framework
+//    - Base Styles
+//    - Widgets
+//    - Plugins
+//    - Pages
+
+
+//  Theme Styles
+//    - Header
+//    - Main / Responsive Columns
+//    - Footer
+
+
+
+
+// -----------------------------
+//  LESS Includes
+// -----------------------------
+
+
+
+// BK LESS Framework
+// ------------------
+
+@import 'bk-sass-framework';
+
+
+
+
+// Base Styles
+// --------------
+
+
+
+
+// Functions
+// --------------
+
+
+// Text Colour Function
+@function text-color($color) {
+    @if (lightness( $color ) > 50) {
+    @return #000; // lighter color, return black
+    }
+    @else {
+    @return #fff; // darker color, return white
+    }
+}
+
+
+
+// -----------------------------
+//  Theme Styles
+// -----------------------------
+
+
+// Base
+// --------------
+
+
+
+// Header
+// ---------------
+
+.template-header {
+    background-color: $color__body--background;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 30px;
+}
+
+
+// Navigation
+.extendednavigation {
+
+
+    &__navigation-list {
+        margin-left: 0;
+    }
+
+
+    &__navigation-item {
+        display: inline-block;
+
+        &.folder ul {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+
+    &__item-name {
+        text-decoration: none;
+    }
+
+
+    &__navigation-toggle {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+
+// Brand
+.brand {
+    display: flex;
+    flex-wap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// Company name
+.companyname {
+
+
+    &__company-link {
+        color: $color__companyname--text;
+        text-decoration: none;
+    }
+
+
+    &__company-text {
+        font-family: $font__companyname--font-family;
+        font-size: $font__companyname--font-size;
+        font-weight: $font__companyname--font-weight;
+        line-height: $font__companyname--line-height;
+    }
+}
+
+
+
+// Footer
+// ---------------
+
+.bk-footer {
+    background-color: $color__footer--background;
+    color: text-color($color__footer--background);
+    padding: 30px;
+}
+
+

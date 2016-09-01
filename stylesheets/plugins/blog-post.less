@@ -1,0 +1,521 @@
+
+// -----------------------------
+//  Single Blog Post
+// -----------------------------
+
+
+.blog-page {
+    .template-feature--wrapper {
+        display: block;
+    }
+}
+
+
+// Single blog post container
+.post-article {
+    position: relative;
+
+    // Add margin to the last post article
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// If the blog post has an image apply these styles
+.post-article--has-image {
+
+
+    // Use the background image
+    .image-link {
+        background-color: transparent;
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 650px;
+        height: 95vh;
+        width: 100%;
+        .transition(none);
+
+        @media (max-height: 800px) {
+            height: 95vh;
+        }
+
+        @media @tablet-860px {
+            width: 100%;
+        }
+
+        @media @mobile-650px {
+            height: 100vh;
+        }
+
+        // Adds overlay to the image to make title text readable
+        &:before {
+            background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 650px;
+            height: 95vh;
+
+            @media (max-height: 800px) {
+                height: 95vh;
+            }
+
+            @media @mobile-650px {
+                height: 100vh;
+            }
+        }
+    }
+
+
+    // Hide the inline image
+    .image {
+        display: none;
+        visibility: hidden;
+    }
+
+
+    // Position the blog post title over the image
+    .post-header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 650px;
+        height: 95vh;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        .flex-display;
+        .align-items(center);
+        .justify-content(center);
+
+        @media (max-height: 800px) {
+            height: 95vh;
+        }
+
+        @media @desktop-1024px {
+            padding: 0 15px;
+        }
+
+        @media @tablet-860px {
+            width: 100%;
+        }
+
+        @media @mobile-650px {
+            height: 100vh;
+        }
+    }
+
+
+    // Post title text styling if image is available
+    .post-title {
+        color: @color__slideshow-title--text;
+        font-family: @font__feature-headline--font-family;
+        font-size: @font__feature-headline--font-size;
+        font-weight: @font__feature-headline--font-weight;
+        letter-spacing: @font__feature-headline--letter-spacing;
+        line-height: @font__feature-headline--line-height;
+        margin-bottom: 0;
+        max-width: 650px;
+        padding-bottom: 0;
+        -webkit-font-smoothing: antialiased;
+
+        @media @desktop-1024px {
+            font-size: bkscale(@font__feature-headline--font-size, 0.9);
+            line-height: bkscale(@font__feature-headline--line-height, 0.9);
+        }
+
+        @media @tablet-860px {
+            font-size: bkscale(@font__feature-headline--font-size, 0.75);
+            line-height: bkscale(@font__feature-headline--line-height, 0.75);
+        }
+
+        @media @mobile-650px {
+            font-size: bkscale(@font__feature-headline--font-size, 0.65);
+            line-height: bkscale(@font__feature-headline--line-height, 0.65);
+        }
+    }
+
+
+    // Blog content area
+    .post-content {
+
+        @media @desktop-1024px {
+            .flex(0 100%);
+            padding-bottom: 0;
+        }
+
+        @media @mobile-650px {
+            padding: 6.5rem 25px 0;
+        }
+    }
+
+
+    .post-body {
+        padding-top: 35px;
+    }
+}
+
+
+// Blog post content area
+.blogpost__post-content {
+    background-color: @color__container--background;
+    -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
+    -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
+    box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
+    margin: 65px auto 0;
+    max-width: 1280px;
+    padding: 3rem 30px 2rem;
+
+    @media only screen and (max-width: 1280px) {
+        margin: 65px 25px 0;
+    }
+
+    @media @tablet-860px {
+        margin: 45px 25px 0;
+    }
+
+    @media @mobile-650px {
+        margin: 35px 25px 0;
+        padding: 1.5rem 25px 0;
+    }
+
+
+    .post-body {
+        margin: 0 auto;
+        max-width: 750px;
+
+        @media @tablet-860px {
+            padding-top: 0;
+        }
+    }
+
+
+    // Make paragraph text larger for blog post content
+    p {
+        font-size: bkscale(@font__p--font-size, 1.05);
+        line-height: bkscale(@font__p--line-height, 1.10);
+        padding-bottom: 20px;
+
+        @media @tablet-860px {
+            font-size: bkscale(@font__p--font-size, 1);
+            line-height: bkscale(@font__p--line-height, 1);
+        }
+
+        @media @mobile-650px {
+            font-size: bkscale(@font__p--font-size, 0.9);
+            line-height: bkscale(@font__p--line-height, 0.92);
+        }
+    }
+
+
+    // Custom blockquote styling for blog post
+    blockquote {
+        color: @color__h2--text;
+        margin-top: 45px;
+        padding: 35px 25px 45px;
+
+        @media @mobile-650px {
+            margin-top: 35px;
+            padding: 35px 10px 30px;
+         }
+    }
+
+
+    // Add additional padding to blog post images
+    img {
+         padding: 2em 0 1.5em;
+
+         @media @mobile-650px {
+            padding: 1.5em 0 1em;
+         }
+    }
+}
+
+
+// Blog post title
+.post-title {
+    text-align: center;
+}
+
+
+// Blog post footer
+.bk-logpost .post-footer {
+    background-color: @color__container--background;
+    border-top: 1px solid @color__body--background;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 20px;
+
+    @media @tablet-860px {
+        padding: 15px 35px;
+    }
+
+    @media @mobile-650px {
+        margin: 0 25px;
+        padding: 15px 25px;
+    }
+}
+
+
+// Blog post attributes
+.post-attributes {
+    .flex-display(inline-flex);
+    margin-top: 0;
+}
+
+
+// Blog post tags
+.post-tags {
+    margin-left: 20px;
+}
+
+
+// Font styling for blog metadata
+.timestamp,
+.category-title,
+.category-link,
+.tags-title,
+.tag-link,
+.product-attribute-title {
+    color: @color__form-label--text;
+    font-family: @font__p--font-family;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+// Make blog footer data inline
+.timestamp,
+.category-link,
+.tag-link {
+    display: inline-block;
+}
+
+// Timestamp spacing
+.timestamp {
+    margin-right: 20px;
+}
+
+
+// Add comma after any kind of tag
+.category-link,
+.tag-link {
+    &:after {
+        content: ",";
+        position: relative;
+    }
+}
+
+// Remove comma after last tag
+.tag-item:last-child .tag-link:after,
+.category-link:after {
+    display: none;
+}
+
+
+// Blog social icons
+.sharing-links {
+    padding: 0;
+    position: relative;
+
+    li.network-item {
+        margin: 10px 16px 10px 0;
+    }
+
+    button {
+        background-color: transparent;
+        color: fade(@color-swatch2, 75%);
+        font-size: 16px;
+        min-width: initial;
+        padding: 0;
+        overflow: hidden;
+        height: 25px;
+        width: 15px;
+        &:hover {
+            background-color: transparent;
+            color: fade(@color-swatch2, 90%);
+        }
+    }
+}
+
+
+// If image is available these styles are applied to the post content
+.blogpost .post-article > .post-image ~ .post-content {
+
+    @media @desktop-1024px {
+        padding: 60px 30px 30px;
+        max-width: 800px;
+    }
+
+    @media @mobile-650px {
+        padding: 30px 30px 15px;
+    }
+}
+
+.blogpost {
+    &__post-image {
+        position: relative;
+        height: 95vh;
+
+        @media @mobile-650px {
+            height: 100vh;
+        }
+    }
+
+    &__image-link {
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+}
+
+// If image is available these styles are applied to the post footer
+.blogpost .post-article > .post-image ~ .post-footer {
+    .flex-display;
+    .justify-content(flex-start);
+    -ms-flex-pack: start;
+    height: 650px;
+    height: 95vh;
+    padding: 0;
+    position: absolute;
+    padding: 10px 25px;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    @media (max-height: 800px) {
+        height: 95vh;
+    }
+
+    @media @desktop-1024px {
+        .flex(0 100%);
+        top: 0;
+        //.justify-content(flex-start);
+        padding-left: 25px;
+    }
+
+    @media @tablet-860px {
+        max-width: 100%;
+    }
+
+    @media @mobile-650px {
+        height: 100vh;
+    }
+
+    // Category and tags title colour
+    .category-title,
+    .tags-title {
+        color: fade(white, 50%);
+        display: block;
+        line-height: 0;
+
+        &:after {
+            content: ":";
+            display: inline-block;
+            position: relative;
+        }
+    }
+
+    .post-attributes {
+        display: inline-block;
+        .flex-order(1);
+        .align-self(flex-end);
+        -ms-flex-item-align: end;
+        margin: 0;
+
+        @media @mobile-650px {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    // Category and tags styling
+    .post-category,
+    .post-tags {
+        display: inline-block;
+        padding: 20px 15px 10px;
+
+        @media @desktop-1024px {
+            padding: 10px 20px 5px 0;
+        }
+    }
+
+    .post-tags {
+        margin-left: 0;
+    }
+
+    // Blog publish date
+    .timestamp {
+        display: inline-block;
+        .align-self(flex-end);
+        -ms-flex-item-align: end;
+        .flex-order(2);
+        margin: 0;
+        padding: 20px 0 20px 25px;
+
+        @media @desktop-1024px {
+            padding: 10px 20px 15px 0;
+        }
+
+        @media @mobile-650px {
+            padding: 20px 0;
+        }
+
+        &:before {
+            color: fade(white, 50%);
+            content: "DATE:";
+            display: block;
+            margin-bottom: 12px;
+            position: relative;
+        }
+    }
+
+    // Tags and date text colour
+    .timestamp,
+    .category-link,
+    .tag-link {
+        color: white;
+    }
+
+    // Social sharing icons
+    .sharing-links {
+        .align-self(flex-end);
+        -ms-flex-align: flex-end;
+        max-height: 55px;
+        position: absolute;
+        left: 35px;
+        bottom: 15px;
+
+        @media @mobile-650px {
+            left: 20px;
+            right: 0;
+        }
+
+        // Sharing buttons text colour
+        button {
+            color: fade(white, 75%);
+        }
+    }
+}
+
+
+[data-widget-type="blogpost"] + .feature-scroll {
+    bottom: ~"calc(5vh - 25px)"!important;
+
+    @media @tablet {
+        display: none!important;
+    }
+}
