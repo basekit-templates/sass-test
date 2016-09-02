@@ -10,112 +10,12 @@
         "images/slideshow-1.jpg",
         "images/slideshow-2.jpg"
     ],
-    "colorSwatches":
-    {
-        "Swatch 1": {
-            "color1":"#ffffff",
-            "color2":"#FBE6A1",
-            "color3":"#1e1e1e",
-            "color4":"#1e1e1e",
-            "color5":"#737373",
-            "color6":"#919191",
-            "color7":"#9AA7B5"
-        }
-    },
-    "fontSwatch": {
-       "title": "Rubik & Playfair",
-        "font1": {
-            "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "36px",
-            "font-weight": "400",
-            "line-height": "48px",
-            "color": "@color-swatch4",
-            "letter-spacing": "0px"
-        },
-        "font2": {
-            "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "30px",
-            "font-weight": "400",
-            "line-height": "40px",
-            "color": "@color-swatch4",
-            "letter-spacing": "0px"
-        },
-        "font3": {
-            "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "22px",
-            "font-weight": "400",
-            "line-height": "34px",
-            "color": "@color-swatch4",
-            "letter-spacing": "0px"
-        },
-        "font4": {
-            "font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
-            "font-size": "20px",
-            "font-weight": "400",
-            "line-height": "38px",
-            "color": "@color-swatch4",
-            "letter-spacing": "0px"
-        },
-        "font5": {
-            "font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
-            "font-size": "17px",
-            "font-weight": "400",
-            "line-height": "36px",
-            "color": "@color-swatch5",
-            "letter-spacing": "0px"
-        },
-        "font6": {
-            "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "28px",
-            "font-weight": "400",
-            "line-height": "36px",
-            "color": "@color-swatch6",
-            "color-hover": "@color-swatch6",
-            "letter-spacing": "1px",
-            "background-color": "@color-swatch1",
-            "background-color-hover": "darken(@color-swatch3, 5%)"
-        },
-        "font7": {
-            "font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
-            "font-size": "15px",
-            "font-weight": "400",
-            "line-height": "26px",
-            "color": "@color-swatch3",
-            "letter-spacing": "2px",
-            "background-color": "@color-swatch3",
-            "background-color-hover": "darken(@color-swatch3,5%)"
-        },
-        "font8": {
-            "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "56px",
-            "font-weight": "400",
-            "line-height": "62px",
-            "color": "@color-swatch1",
-            "letter-spacing": "0px"
-        },
-        "font9": {
-            "font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
-            "font-size": "18px",
-            "font-weight": "400",
-            "line-height": "32px",
-            "color": "@color-swatch1",
-            "letter-spacing": "0px"
-        },
-        "font10": {
-            "font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
-            "font-size": "19px",
-            "font-weight": "400",
-            "line-height": "30px",
-            "color": "@color-swatch1",
-            "letter-spacing": "2px"
-        }
-    },
     "styles": {
         "site": {
             "color__body--background": "#f5f5f5",
             "color__container--background": "#ffffff",
             "color__link--text": "#e7a022",
-            "font__companyname--font-family": "$font-swatch10-font-family",
+            "font__companyname--font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
             "font__companyname--font-size": "18px",
             "font__companyname--line-height": "26px",
             "font__companyname--font-weight": "400",
@@ -123,31 +23,31 @@
             "color__companyname--text": "#000000"
         },
         "typography": {
-            "font__h1--font-family": "$font-swatch1-font-family",
+            "font__h1--font-family": "\"Playfair Display\", Times New Roman, serif",
             "font__h1--font-size": "36px",
             "font__h1--line-height": "48px",
             "font__h1--font-weight": "400",
             "font__h1--letter-spacing": "0px",
             "color__h1--text": "#1e1e1e",
-            "font__h2--font-family": "$font-swatch2-font-family",
+            "font__h2--font-family": "\"Playfair Display\", Times New Roman, serif",
             "font__h2--font-size": "30px",
             "font__h2--line-height": "40px",
             "font__h2--font-weight": "400",
             "font__h2--letter-spacing": "0px",
             "color__h2--text": "#1e1e1e",
-            "font__h3--font-family": "$font-swatch3-font-family",
+            "font__h3--font-family": "\"Playfair Display\", Times New Roman, serif",
             "font__h3--font-size": "22px",
             "font__h3--font-weight": "400",
             "font__h3--line-height": "34px",
             "font__h3--letter-spacing": "0px",
             "color__h3--text": "#1e1e1e",
-            "font__h4--font-family": "$font-swatch4-font-family",
+            "font__h4--font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
             "font__h4--font-size": "20px",
             "font__h4--font-weight": "400",
             "font__h4--line-height": "38px",
             "font__h4--letter-spacing": "0px",
             "color__h4--text": "#1e1e1e",
-            "font__p--font-family": "$font-swatch5-font-family",
+            "font__p--font-family": "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
             "font__p--font-size": "17px",
             "font__p--font-weight": "400",
             "font__p--line-height": "36px",
